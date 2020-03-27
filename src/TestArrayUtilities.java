@@ -13,6 +13,7 @@ public class TestArrayUtilities {
 		
 		assertArrayEquals(testArr, arr);
 	}
+
 	
 	@Test
 	public void testShiftMatrix() {

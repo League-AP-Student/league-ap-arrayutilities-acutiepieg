@@ -17,7 +17,12 @@ public class NumberMatrix {
 	 */	
 	public void shiftMatrix(int num)
 	{ /* to be implemented in part (b) */ 
-		
+		int temp;
+		for(int i = 0; i < matrix.length; i++) {
+			temp = matrix[i][matrix.length - 1];
+			ArrayUtil.shiftArray(matrix[i], num);
+			num = temp;
+		}
 		
 		
 	}
@@ -30,7 +35,7 @@ public class NumberMatrix {
 	 */
 	public void rotateMatrix()
 	{ /* to be implemented in part (c) */ 
-		
+		shiftMatrix(matrix[matrix.length - 1][matrix[0].length - 1]);
 	}
 	
 	// There may be instance variables, constructors, and methods that are not
